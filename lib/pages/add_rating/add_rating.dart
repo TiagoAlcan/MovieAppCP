@@ -85,12 +85,12 @@ class _AddRatingPageState extends State<AddRatingPage> {
                       color: Colors.white70,
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 30),
                   // Star rating
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      for (int i = 1; i <= 5; i++)
+                      for (int i = 1; i <= 10; i++)
                         GestureDetector(
                           onTap: () {
                             setState(() {
@@ -98,11 +98,11 @@ class _AddRatingPageState extends State<AddRatingPage> {
                             });
                           },
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            padding: const EdgeInsets.symmetric(horizontal: 10.0),
                             child: Icon(
                               Icons.star,
                               color: _rating >= i ? Colors.amber : Colors.grey.shade400,
-                              size: 40,
+                              size: 15,
                             ),
                           ),
                         ),
